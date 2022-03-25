@@ -11,16 +11,12 @@ This photo is from 2018 and shows a very early (failed) attempt at something lik
 
 ## Hardware Block Diagram
 
-![Hardware block diagram](Hardware Block Diagram.drawio.png)
+![Hardware block diagram](HardwareBD.png)
 
 ## Software Block Diagram
 
-![Software block diagram](Software Block Diagram.drawio.png)
+![Software block diagram](SoftwareBD.png)
 
 ## Hierarchy of Control
 
-![Hierarchy of control diagram](Hierarchy of Control.drawio.png)
-
-
-
-git@github.com-settinger:settinger/making_embedded_systems.git
+![Hierarchy of control diagram](HoC.png)
