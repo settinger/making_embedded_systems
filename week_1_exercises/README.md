@@ -7,7 +7,7 @@ This embedded system impersonates a AA battery. Most of the time, it sits in a l
 ![A AA battery (bottom), a li-ion cell and PCB shaped like a AA battery (middle), a AAA battery and circuit that can be ignored.](formfactor.jpg)
 *Pictured: a AA battery (bottom), a li-ion cell and PCB shaped like a AA battery (middle), a AAA battery and circuit that can be ignored (top).*
 
-This photo is from 2018 and shows a very early (failed) attempt at something like the system described above. It is here to convey what I mean by "an embedded system in AA form factor".
+This photo is from 2018 and shows a very early (failed) attempt at something shaped like the system described above (but functionally very different). It is here to convey what I mean by "an embedded system in AA form factor".
 
 ## Hardware Block Diagram
 
