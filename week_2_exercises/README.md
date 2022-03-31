@@ -33,8 +33,13 @@ The dev kit is readily available; it costs US$46.88 on Digi-Key and Mouser, or U
 
 ### Hardware Block Diagram
 
-TODO: hardware block diagram
+![](bluenrg-hardware.png)
 
+### Application Note
+I looked at [PCB Design Guidelines](https://www.st.com/resource/en/application_note/an4819-pcb-design-guidelines-for-the-bluenrg1-and-bluenrg2-devices-stmicroelectronics.pdf) because I think eventually I would like to design my own PCB for this chip. I am grateful to have this A/N because antenna design is not something I want to attempt myself.
+
+-------------------------
+-------------------------
 -------------------------
 
 ## Board 2: `CY8CKIT-050`
@@ -45,18 +50,31 @@ The [CY8CKIT-050](https://www.infineon.com/cms/en/product/evaluation-boards/cy8c
 The processor holds 256 kB of Flash memory, 64 kB static RAM, and 2 kB of nonvolatile EEPROM. The dev kit provides no additional memory.
 
 ### Peripherals
-The dev kit attaches peripherals for USB communication, RS-232 communication, capacitive sensing buttons and sliders, and an LCD interface. The peripherals available in the processor itself include:
-- TODO: figure out how PSoC peripherals work
-
-72 gpio, has capsense, has lcd drive, 4 timer/counters, 1 comm block, 24 UDB, USB FS?, CAN bus, 4 DAC, 4 opamp, 4x SC/CT analog blocks, 1 Digital filter block, 24 DMA channels, 1 PLL, 0.5V boost converter
+The dev kit attaches peripherals for USB communication, RS-232 communication, capacitive sensing buttons and sliders, and an LCD interface. Due to the programmable-I/O functionality of the device, these aren't connected to dedicated SPI buses, I<sup>2</sup>C pins, etc. The peripherals that can be set up and configured in the processor itself include a USB filesystem, a CAN bus, 4 op-amps, 4 analog comparators, digital filters, and direct memory access terminals. Does a boost converter count as a peripheral? There's a boost converter on the board for voltage supplies down to 0.5V.
 
 ### ADC
-TODO: ADC
-2x 12-bit SAR
-1x 20-bit Delta Sigma
+The processor has three ADCs. One is a ΔΣ ADC, which from what I understand has lower noise than the successive-approximation type of ADC. That ADC has 20-bit resolution. Two successive-approximation ADCs (which, in my mind, constitute a "normal" microcontroller ADC) with 12-bit resolution are available as well.
 
 ### Costs
 This dev kit is out of stock on Mouser but would have cost US$92.50. It's in stock at Digi-Key for US$93.42. The CY8C5868AXI-LP035 processor is out of stock, costs US$26.45 on Digi-Key and US$26.42 on Mouser. None of the chips in the CY8C58LP family are in stock on those sites.
 
 ### Hardware Block Diagram
-TODO: hardware block diagram
+The hardware blocks are defined in the [user manual](https://www.infineon.com/dgdl/Infineon-CY8CKIT-050_Kit_Guide-UserManual-v01_00-EN.pdf?fileId=8ac78c8c7d0d8da4017d0eec84e27829) as:
+- Power supply system
+- Programming interface [communicates with processor via UART or JTAG/SWD]
+- USB communications [USB directly connected to processor]
+- Boost convertor [_sic_]
+- PSoC 5LP and related circuitry
+- 32 kHz crystal
+- 24 MHz crystal
+- Port D (capacitive sensing and generic I/O port) breakout
+- Port E (analog I/O) breakout
+- RS-232 communications interface
+- Prototyping area
+- Character LCD interface [ST7066 protocol according to the LCD's datasheet]
+- Capacitive sensing buttons and sliders
+
+![](cypress-hardware.png)
+
+### Application Note
+I looked at the [digital design best practices](http://www.cypress.com/?rid=67774&source=an81623) application note which, to be perfectly honest, does not make this board less intimidating.
