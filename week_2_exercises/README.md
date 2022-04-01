@@ -2,7 +2,7 @@
 
 ## Board 1: `STEVAL-IDB008V1M`
 ### Processor
-The [STEVAL-IDB008V1M](https://www.st.com/en/evaluation-tools/steval-idb008v1m.html) is based on ST's [BlueNRG-M2SA](https://www.st.com/en/wireless-connectivity/bluenrg-m2.html) module, which itself contains a [BlueNRG-232](https://www.st.com/en/wireless-connectivity/bluenrg-2.html) SoC. 
+The [STEVAL-IDB008V1M](https://www.st.com/en/evaluation-tools/steval-idb008v1m.html) is based on ST's [BlueNRG-M2SA](https://www.st.com/en/wireless-connectivity/bluenrg-m2.html) module, which itself contains a [BlueNRG-232](https://www.st.com/en/wireless-connectivity/bluenrg-2.html) SoC. This is a Cortex-M0 processor with tightly integrated Bluetooth LE functionality.
 
 ### Memory
 The BlueNRG-2 Processor holds 256 kB Flash and 24 kB RAM. [See section 3.3, "Memories" of the datasheet](https://www.st.com/resource/en/datasheet/bluenrg-2.pdf). There are no other memory types in the processor, and no external memory on the dev board.
