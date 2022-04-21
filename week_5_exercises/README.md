@@ -2,7 +2,7 @@
 
 ## Projective Set on the STM32F429I-DISC1
 
-General idea: an implementation of [Projective Set](https://en.wikipedia.org/wiki/Projective_Set_(game)) with multiple difficulty settings, touchscreen and console input, colorblindness accessibility modes, and shake-to-reset function using the on-board motion sensors.
+General idea: an implementation of [Projective Set](https://en.wikipedia.org/wiki/Projective_Set_(game)) with multiple difficulty settings, touchscreen and console input, colorblindness accessibility modes, and shake-to-reset function using the on-board motion sensors. The state diagrams describe a more scaled-back version with what I'd consider the least viable product.
 
 ## Abstract State Machine
 
@@ -14,3 +14,4 @@ General idea: an implementation of [Projective Set](https://en.wikipedia.org/wik
 
 ## State Table
 
+![](SM_table.png)
