@@ -10,4 +10,7 @@ General idea: an implementation of [Projective Set](https://en.wikipedia.org/wik
 
 ## SDL State Machine
 
+![](SDL_SM.png)
+
 ## State Table
+
