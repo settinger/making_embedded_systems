@@ -4,21 +4,10 @@
 
 General idea: an implementation of [Projective Set](https://en.wikipedia.org/wiki/Projective_Set_(game)) with multiple difficulty settings, touchscreen and console input, colorblindness accessibility modes, and shake-to-reset function using the on-board motion sensors.
 
-```mermaid
-  graph TD;
-      A-->B;
-      A-->C;
-      B-->D;
-      C-->D;
-```
+## Abstract State Machine
 
-```mermaid
-graph stateDiagram-v2;
-  [*] --> Still;
-  Still --> [*];
-  
-  Still --> Moving;
-  Moving --> Still;
-  Moving --> Crash;
-  Crash --> [*];
-```
+![](FSM_abstract.png)
+
+## SDL State Machine
+
+## State Table
