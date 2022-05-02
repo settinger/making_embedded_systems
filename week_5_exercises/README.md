@@ -1,0 +1,3 @@
+# Implementing a command line interface
+
+Most of my week got consumed by unforeseen illness and unforeseen travel. But I at least got the CLI ported to the STM32F429I-DISC1. It is presented here as a standalone project, but I understand it well enough to incorporate into my intended final project....maybe. I think for my purposes I need a circular buffer which I have not attempted to implement yet, and maybe I can use `HAL_UART_Receive_IT` to receive inputs with the UART5 global interrupt instead of polling with a delay every 2 milliseconds. No new commands added, but I understand the process well enough to adjust it for my final project, I think.

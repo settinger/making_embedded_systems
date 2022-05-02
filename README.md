@@ -5,3 +5,4 @@ Assignments for the orange star cohort
 - [Week 2](week_2_exercises/README.md)
 - Week 3 assignment skipped under "can do, won't do" philosophy
 - [Week 4](week_4_exercises/README.md)
+- [Week 5](week_5_exercises/README.md)
