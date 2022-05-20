@@ -12,9 +12,13 @@ static void showStackPointerA(void) {
     Serial_Message(dialog);
 }
 
+/* 
+ * Thank you Daniel Fu for finding this asm snippet on stack overflow
+ * https://stackoverflow.com/questions/57032089/reading-stack-pointer-value-in-arm
+ */
 static void showStackPointerB(void) {
     volatile int registerValue;
-    __asm volatile ("mov %0, sp" : "=r"(registerValue)); // Thank you to Daniel Fu for finding this on stack overflow: https://stackoverflow.com/questions/57032089/reading-stack-pointer-value-in-arm
+    __asm volatile ("mov %0, sp" : "=r"(registerValue));
     char dialog[40];
     sprintf(dialog, "Stack pointer: 0x%08X\r\n", (uintptr_t)(registerValue));
     Serial_Message(dialog);
@@ -36,6 +40,7 @@ static void showHeapPointer(void) {
 ```
 
 ![](terminal.png)
+
 (In this screenshot the board is idling waiting for user input, so nothing interesting happens to the stack).
 
 ## Printing out addresses to variables
